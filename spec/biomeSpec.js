@@ -20,7 +20,8 @@ describe('BiomeList', function () {
     describe('when a single achievement with a name of "a new achievement" is added', function () {
       let theAchievement
       beforeEach(function () {
-        // A new Biome | Namespace | NumericalID | Dimension Location | Description | Icon
+        // Name|NameSpace|NumID|Dimension|BiomeKey|Desc|Icon
+        // "Ocean"|5|0|1|5|"water"|50
         theBiomeList.addAchievement("Ocean", 5, 0, 1, 5, "water", 50)
         theAchievement = theBiomeList.allMyAchievements[0]
       })
@@ -134,23 +135,6 @@ describe('BiomeList', function () {
       expect(itemJSON).toBe('[{"id": "","name":"a new achievement","completed":false}]')
     })
   })
-
-  // CALCULATOR
-  /*
-  describe('looking at percentages', function() {
-    it('should have a Completed Percentage', function () {
-
-    })
-
-    it('should have a Not Completed Percentage', function () {
-      
-    })
-
-    it('should have a Total Percentage of 100%', function () {
-      
-    })
-  })
-  */
 
   
   // FEATURE 3. Sort parts
@@ -348,6 +332,24 @@ describe('BiomeList', function () {
       expect(true).toBeTrue()
     })
   })
+
+  // CALCULATOR
+  /*
+  describe('looking at percentages', function() {
+    it('should have a Completed Percentage', function () {
+
+    })
+
+    it('should have a Not Completed Percentage', function () {
+      
+    })
+
+    it('should have a Total Percentage of 100%', function () {
+      
+    })
+  })
+  */
+
   // FEATURE 12. A calculation across many parts
   describe('working out if all achievements are done', function () {
     it('should return true for an empty list', function () {
